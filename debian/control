@@ -1,0 +1,42 @@
+Source: mahimahi
+Section: net
+Priority: optional
+Maintainer: Keith Winstein <keithw@mit.edu>
+Homepage: http://mahimahi.mit.edu
+Build-Depends: debhelper (>= 9), autotools-dev, dh-autoreconf, iptables, protobuf-compiler, libprotobuf-dev, pkg-config, libssl-dev, dnsmasq-base, ssl-cert, libxcb-present-dev, libcairo2-dev, libpango1.0-dev, iproute2, apache2-dev, apache2-bin
+Standards-Version: 4.1.2.0
+Vcs-Git: https://github.com/ravinet/mahimahi
+Vcs-Browser: https://github.com/ravinet/mahimahi
+
+Package: mahimahi
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, iptables, dnsmasq-base, apache2-bin, gnuplot, iproute2, apache2-api-20120211
+Recommends: mahimahi-traces
+Description: tools for network emulation and analysis
+ Mahimahi is a suite of user-space tools for network emulation and analysis.
+ .
+ Each mahimahi tool spawns a lightweight container, generally connected
+ to the outside via a synthetic network device that observes packets in
+ transit or emulates a desired behavior.
+ .
+ The tools are composable so that a series of emulated network effects
+ can be chained together, with mahimahi containers nested inside each
+ other. Each tool takes an optional command to execute, so it is possible
+ to create a series of nested containers with one command line.
+
+Package: mahimahi-traces
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: mahimahi
+Description: network traces for the mahimahi toolkit
+ These trace files represent the time-varying capacity of U.S. cellular
+ networks as experienced by a mobile user. They were recorded using the
+ "Saturator" tool described in the research paper:
+ .
+ K. Winstein, A. Sivaraman, and H. Balakrishnan, "Stochastic Forecasts
+ Achieve High Throughput and Low Delay over Cellular Networks", USENIX
+ NSDI 2013.
+ .
+ The traces can be played back by the mm-link network emulator,
+ part of the mahimahi toolkit.
