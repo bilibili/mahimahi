@@ -1,0 +1,67 @@
+mahimahi (0.98-1) unstable; urgency=medium
+
+  * Fix FTBFS on glibc 2.25 (Closes: #882623)
+
+ -- Keith Winstein <keithw@mit.edu>  Mon, 04 Dec 2017 15:57:28 -0800
+
+mahimahi (0.97-1) unstable; urgency=medium
+
+  * Add script to convert "rates over time" to an mm-link trace
+  * Fix FTBFS on GCC 7 (Closes: #853534)
+
+ -- Keith Winstein <keithw@mit.edu>  Wed, 23 Aug 2017 17:27:15 -0700
+
+mahimahi (0.96-1) unstable; urgency=medium
+
+  * Fix error from deprecated TLS method and -Werror (Closes: #847398)
+  * Add new cellular trace (ATT-LTE-driving-2016)
+
+ -- Keith Winstein <keithw@cs.stanford.edu>  Mon, 19 Dec 2016 17:37:39 -0800
+
+mahimahi (0.95-1) unstable; urgency=medium
+
+  * Fix FTBFS against libxcb 1.12 (Closes: #839749)
+
+ -- Keith Winstein <keithw@mit.edu>  Wed, 12 Oct 2016 02:55:25 -0400
+
+mahimahi (0.94-1) unstable; urgency=medium
+
+  * Add CoDel and PIE implementations (Joseph Beshay)
+
+ -- Keith Winstein <keithw@mit.edu>  Wed, 12 Oct 2016 01:03:27 -0400
+
+mahimahi (0.93-1) unstable; urgency=medium
+
+  * Fix FTBFS with gcc 6
+  * Fix broken TCP DNS resolution
+  * Update mm-delay-graph to work with gnuplot 5
+  * Add new (2016) T-Mobile network trace to trace library
+
+ -- Keith Winstein <keithw@mit.edu>  Thu, 08 Sep 2016 22:43:46 -0400
+
+mahimahi (0.92-1) unstable; urgency=low
+
+  * Fix bug when /proc/net/route is empty
+  * Fix bug preventing HTTPS resources from working in mm-webreplay
+  * mm-link --once now quits only when both uplink and downlink have
+
+ -- Keith Winstein <keithw@mit.edu>  Sat, 16 Jan 2016 18:47:17 -0800
+
+mahimahi (0.91a-1) unstable; urgency=low
+
+  * Fix Debian build failure on some 64-bit platforms (#806368)
+  * Fix Debian build failure for source-only uploads (#806072)
+
+ -- Keith Winstein <keithw@mit.edu>  Thu, 26 Nov 2015 11:35:47 -0800
+
+mahimahi (0.91-1) unstable; urgency=low
+
+  * mm-webreplay now supports persistent HTTP connections (Deepak Narayanan)
+
+ -- Keith Winstein <keithw@mit.edu>  Sat, 17 Oct 2015 05:47:59 -0700
+
+mahimahi (0.90-1) unstable; urgency=low
+
+  * Initial release. (Closes: #782413)
+
+ -- Keith Winstein <keithw@mit.edu>  Tue, 21 Apr 2015 00:48:16 -0700

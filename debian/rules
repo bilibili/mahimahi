@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_fixperms-arch:
+	dh_fixperms
+	chmod 4755 debian/mahimahi/usr/bin/mm-delay
+	chmod 4755 debian/mahimahi/usr/bin/mm-loss
+	chmod 4755 debian/mahimahi/usr/bin/mm-onoff
+	chmod 4755 debian/mahimahi/usr/bin/mm-webrecord
+	chmod 4755 debian/mahimahi/usr/bin/mm-webreplay
+	chmod 4755 debian/mahimahi/usr/bin/mm-link
+	chmod 4755 debian/mahimahi/usr/bin/mm-meter
